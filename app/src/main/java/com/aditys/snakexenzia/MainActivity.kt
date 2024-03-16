@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = Color.Green
+                    color = Color(0xFF223835)
                 ) {
                     Snake(game)
                 }
@@ -130,6 +130,7 @@ fun Snake(game: Game) {
 @Composable
 fun Buttons(onDirectionChange: (Pair<Int, Int>) -> Unit) {
     val buttonSize = Modifier.size(64.dp)
+    val buttonColor = Color(0xFF5B9179)
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(24.dp)) {
         Button(onClick = { onDirectionChange(Pair(0, -1)) }, modifier = buttonSize) {
             Icon(Icons.Default.KeyboardArrowUp, null)
@@ -143,12 +144,11 @@ fun Buttons(onDirectionChange: (Pair<Int, Int>) -> Unit) {
                 Icon(Icons.Default.KeyboardArrowRight, null)
             }
         }
-    }
-    Button(onClick = { onDirectionChange(Pair(0, 1)) }, modifier = buttonSize) {
-        Icon(Icons.Default.KeyboardArrowDown, null)
+        Button(onClick = { onDirectionChange(Pair(0, 1)) }, modifier = buttonSize) {
+            Icon(Icons.Default.KeyboardArrowDown, null)
+        }
     }
 }
-
 @Composable
 fun Board(state: State) {
     BoxWithConstraints(Modifier.padding(16.dp)) {
@@ -165,7 +165,7 @@ fun Board(state: State) {
                 .offset(x = tileSize * state.food.first, y = tileSize * state.food.second)
                 .size(tileSize)
                 .background(
-                    Color.DarkGray, CircleShape
+                    Color(0xFFe95011), CircleShape
                 )
         )
 
@@ -175,7 +175,7 @@ fun Board(state: State) {
                     .offset(x = tileSize * it.first, y = tileSize * it.second)
                     .size(tileSize)
                     .background(
-                        Color.DarkGray
+                        Color(0xFF5B9179)
                     )
             )
         }
