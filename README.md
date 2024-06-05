@@ -13,3 +13,5 @@
 
 https://github.com/Aditys018/SnakeXenzia/assets/100122761/ecbe29a4-41e4-4e81-a2de-79b018371d60
 
+
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
